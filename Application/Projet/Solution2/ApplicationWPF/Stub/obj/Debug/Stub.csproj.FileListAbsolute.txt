@@ -1,0 +1,9 @@
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\bin\Debug\Stub.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\bin\Debug\Stub.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\bin\Debug\Stub.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\bin\Debug\BibliothequeDeClasses.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\bin\Debug\BibliothequeDeClasses.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\bin\Debug\BibliothequeDeClasses.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\obj\Debug\Stub.csprojResolveAssemblyReference.cache
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\obj\Debug\Stub.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Stub\obj\Debug\Stub.pdb

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApplicationConsole</name>
+    </assembly>
+    <members>
+        <member name="T:ApplicationConsole.Program">
+            <summary>
+            Logique d'interaction pour WindowEdit.xaml.
+            </summary>
+        </member>
+        <member name="M:ApplicationConsole.Program.Main(System.String[])">
+            <summary>
+            Tests unitaires.
+            </summary>
+        </member>
+    </members>
+</doc>

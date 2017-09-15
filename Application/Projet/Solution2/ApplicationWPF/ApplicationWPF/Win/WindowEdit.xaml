@@ -1,0 +1,66 @@
+﻿<Window x:Class="ApplicationWPF.WindowEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApplicationWPF"
+        mc:Ignorable="d"
+        Closing="Window_Closing"
+        ShowInTaskbar="False"
+        Icon="../Pictures/logo.ico"
+        Title="Fenêtre de modification" Top="250" Left="50" Background="#151515" BorderBrush="Orange" BorderThickness="2" Height="550" Width="600" ResizeMode="NoResize" >
+    <DockPanel>
+
+        <StackPanel DockPanel.Dock="Bottom">
+            <StackPanel HorizontalAlignment="Center" DockPanel.Dock="Bottom" Orientation="Horizontal">
+                <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Cliquer pour rechercher un fichier dans votre pc" x:Name="button" Content="Browse" Click="click_btnBrowse" Height="25" Width="150" HorizontalAlignment="Left" Margin="20" FontFamily="Trebuchet MS"/>
+                <TextBox x:Name="Im" Width="170" Height="25" Margin="10" Text="{Binding Pathimg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Cliquer si vous avez terminé vos modifications" x:Name="button1" Content="Finish" Click="click_btnFinish" Height="25" Margin="5 5 5 5" FontFamily="Trebuchet MS"/>
+        </StackPanel>
+
+        <ListView DockPanel.Dock="Bottom" ItemsSource="{Binding Ing}" Background="Transparent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir le nouveau nom de l'ingrédient" Text="{Binding Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150" Margin="90 0 0 0"/>
+                        <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir le nouveau nombre d'exemplaire de l'ingrédient" Text="{Binding Nb, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="30" Margin="25 0 0 0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Label Content="Ingrédients :" DockPanel.Dock="Bottom" Foreground="White" FontWeight="Bold" FontFamily="Trebuchet MS"/>
+
+
+        <ListView DockPanel.Dock="Bottom" ItemsSource="{Binding Outils}" Background="Transparent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir le nouveau nom de l'outil" Text="{Binding Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="90 0 0 0" Width="150"/>
+                        <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir le nouveau nombre d'exemplaires de l'outil" Text="{Binding Nb, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="25 0 0 0" Width="30"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Content="Outils :" DockPanel.Dock="Bottom" Foreground="White" FontWeight="Bold" FontFamily="Trebuchet MS"/>
+
+        <StackPanel>
+            <Label Content="Plat :" Foreground="White" FontWeight="Bold" FontFamily="Trebuchet MS"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Name :" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Width="100" FontFamily="Trebuchet MS"/>
+                <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir le nouveau nom" HorizontalAlignment="Right" Width="150" Margin="10" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Categorie :" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Width="100" FontFamily="Trebuchet MS"/>
+                <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir la nouvelle catégorie" Text="{Binding Categ, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Width="150" Margin="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Recipe :" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Width="100" FontFamily="Trebuchet MS"/>
+                <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir la nouvelle recette" Text="{Binding Recipe, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Margin="10"/>
+            </StackPanel>
+            <Label x:Name="MonLabelErreur2" Visibility="Hidden" HorizontalAlignment="Center" Foreground="Red" Content="Il n'y a pas de champs"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfApplication1.WindowAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        ShowInTaskbar="False"
+        Icon="../Pictures/logo.ico"
+        Closing="Window_Closing"
+        Title="Cookination" Top="280" Left="20" Background="#151515" BorderBrush="Orange" BorderThickness="2" Height="500" Width="500" ResizeMode="NoResize">
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <DockPanel Margin="10">
+
+            <StackPanel DockPanel.Dock="Bottom">
+                <Label x:Name="MonLabelErreur" Visibility="Hidden" HorizontalAlignment="Center" Foreground="Red" Content="Veuillez compléter tous les champs"/>
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Cliquez pour rechercher un fichier dans votre pc" Content="Browse" Height="25" Click="click_btnBrowse" Grid.ColumnSpan="2" Margin="40,0,249,0" FontFamily="Trebuchet MS"/>
+                    <TextBox BorderBrush="Orange" x:Name="textBox13" Grid.Column="1" TextWrapping="Wrap" Width="200" TextChanged="textBox13_TextChanged" Margin="61,0,28,0"/>
+                </Grid>
+                <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Créer le plat avec les données saisies" x:Name="button" Content="Add" Click="Validate" Height="25" FontFamily="Trebuchet MS"/>
+                <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Retour à la fenêtre principale" x:Name="button1" Content="Cancel" Click="Cancel" Height="25" FontFamily="Trebuchet MS"/>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Plats :" FontWeight="Bold" Foreground="White" Height="25" TextDecorations="underline" FontFamily="Trebuchet MS"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Name :" Foreground="White" FontWeight="Bold" Height="25" Margin="5" FontFamily="Trebuchet MS"/>
+                    <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisissez le nom de votre plat." BorderBrush="Orange" x:Name="name" Grid.Column="1" TextWrapping="Wrap" Height="25"/>
+
+                    <Label Content="Categorie :" Grid.Row="1" Foreground="White" FontWeight="Bold" Height="25" Margin="5" FontFamily="Trebuchet MS"/>
+                    <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisissez la catégorie de votre plat" BorderBrush="Orange" x:Name="cat" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Height="25" TextChanged="cat_TextChanged"/>
+
+                    <Label Margin="5" Content="Recipe :" Grid.Row="2" Foreground="White" FontWeight="Bold" Height="25" FontFamily="Trebuchet MS"/>
+                    <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir la recette" BorderBrush="Orange" x:Name="Rece" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Height="100" TextChanged="Rece_TextChanged"/>
+
+                </Grid>
+
+                <TextBlock Text="Ingredients :" FontWeight="Bold" Foreground="White" Height="25" TextDecorations="underline" FontFamily="Trebuchet MS"/>
+                <StackPanel x:Name="MyGrid"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Ajouter un champ d'ingrédient" Content="✚" Width="20" Click="AddIngs" HorizontalAlignment="Left"/>
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Supprimer un champ d'ingrédient" Content="⚊" Width="20" Click="DelIngs" HorizontalAlignment="Left"/>
+                    <Label x:Name="MonLabelErreur2" Visibility="Hidden" HorizontalAlignment="Center" Foreground="Red" Content="Il n'y a pas de champs"/>
+                </StackPanel>
+                <TextBlock Text="Tools :" FontWeight="Bold" Foreground="White" Height="25" TextDecorations="underline" FontFamily="Trebuchet MS"/>
+                <StackPanel x:Name="MyGrid2"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Ajouter un champ d'outil" Content="✚" Width="20" Click="AddTools" HorizontalAlignment="Left"/>
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Supprimer un champ d'outil" Content="⚊" Width="20" Click="DelTools" HorizontalAlignment="Left"/>
+                    <Label x:Name="MonLabelErreur3" HorizontalAlignment="Right" Foreground="Red" Content="Il n'y a pas de champs" Visibility="Hidden"/>
+                    <Label x:Name="MonLabelErreur4" HorizontalAlignment="Right" Foreground="Red" Content="Champ(s) invalide(s)" Visibility="Hidden"/>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+    </ScrollViewer>
+</Window>

@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BibliothequeDeClasses</name>
+    </assembly>
+    <members>
+        <member name="T:BibliothequeDeClasses.Composant">
+            <summary>
+            Classe abstraite Composant, implémentant INotifyPropertyChanged.
+            </summary>
+        </member>
+        <member name="F:BibliothequeDeClasses.Composant._Nom">
+            <summary>
+            Déclare une string correspondant au nom du composant pour la NPC.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.Composant.Nom">
+            <summary>
+            Déclare une string correspondant au nom du composant.
+            On précise le DataMember pour la sérialization.
+            </summary> 
+        </member>
+        <member name="F:BibliothequeDeClasses.Composant._Nb">
+            <summary>
+            Déclare un int correspondant au nb de composants pour la NPC.
+            </summary>
+        </member>
+        <member name="P:BibliothequeDeClasses.Composant.Nb">
+            <summary>
+            Déclare un int correspondant au nb de composants.
+            On précise le DataMember pour la sérialization.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Composant.OnPropertyChanged(System.String)">
+            <summary>
+            Méthode protected OnPropertyChanged, prenant en paramètre une string. Lance l'event de changement de la variable en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Composant.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructeur par défaut, de base.
+            </summary> 
+        </member>
+        <member name="E:BibliothequeDeClasses.Composant.PropertyChanged">
+            <summary>
+            Evenement de changement de la variable.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Composant.add(BibliothequeDeClasses.Dishes)">
+            <summary>
+            Méthode qui ajoute un plat d à la liste.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Composant.delete(BibliothequeDeClasses.Dishes)">
+            <summary>
+            Méthode qui supprime un plat d de la liste.
+            </summary> 
+        </member>
+        <member name="T:BibliothequeDeClasses.IngredientsMaker">
+            <summary>
+            Classe IngredientsMaker, permettant de générer des ingrédients.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.IngredientsMaker.MakeIngredients(System.String,System.Int32)">
+            <summary>
+            Retourne l'instanciation d'un nouvel ingrédient.
+            </summary> 
+        </member>
+        <member name="T:BibliothequeDeClasses.ToolsMaker">
+            <summary>
+            Classe ToolsMaker, permettant de générer des outils.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.ToolsMaker.MakeTools(System.String,System.Int32)">
+            <summary>
+            Retourne l'instanciation d'un nouvel outil.
+            </summary> 
+        </member>
+        <member name="T:BibliothequeDeClasses.Dishes">
+            <summary>
+            Classe Dishes qui implémente l'interface IDishes pour empêcher l'instanciation en dehors du modèle ainsi que INotifyPropertyChanged.
+            </summary> 
+        </member>
+        <member name="F:BibliothequeDeClasses.Dishes._Name">
+            <summary>
+            Déclare une string correspondant au nom du plat pour la NPC.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.Dishes.Name">
+            <summary>
+            Déclare une propriété correspondant au nom du plat.
+            DataMember crée sur la propriété.
+            </summary> 
+        </member>
+        <member name="F:BibliothequeDeClasses.Dishes._Categ">
+            <summary>
+            Déclare une string correspondant à la catégorie du plat pour la NPC.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.Dishes.Categ">
+            <summary>
+            Déclare une propriété correspondant à la catégorie du plat.
+            DataMember crée sur la propriété.
+            </summary>
+        </member>
+        <member name="F:BibliothequeDeClasses.Dishes._Recipe">
+            <summary>
+            Déclare une propriété correspondant à la recette du plat pour la NPC.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.Dishes.Recipe">
+            <summary>
+            Déclare une propriété correspondant à la recette du plat.
+            DataMember crée sur la propriété.
+            </summary> 
+        </member>
+        <member name="F:BibliothequeDeClasses.Dishes._Pathimg">
+            <summary>
+            Déclare une propriété correspondant au chemin de l'image du plat pour la NPC.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.Dishes.Pathimg">
+            <summary>
+            Déclare une propriété correspondant au chemin de l'image du plat.
+            DataMember crée sur la propriété.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.Dishes.Ing">
+            <summary>
+            Déclare une observable collection correspondant à la liste d'ingrédients du plat.
+            DataMember crée sur la propriété.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.Dishes.Outils">
+            <summary>
+            Déclare une une observable collection correspondant à la liste d'outils du plat.
+            DataMember crée sur la propriété.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.OnPropertyChanged(System.String)">
+            <summary>
+            Méthode protected OnPropertyChanged, prenant en paramètre une string. Lance l'event de changement de la variable en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.#ctor(System.String,System.String,System.String,System.Uri)">
+            <summary>
+            Constructeur par défaut, de base.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.#ctor(System.String,System.String,System.String,System.Uri,System.Collections.ObjectModel.ObservableCollection{BibliothequeDeClasses.Ingredients},System.Collections.ObjectModel.ObservableCollection{BibliothequeDeClasses.Tools})">
+            <summary>
+            Constructeur simplifié prenant en paramètre directement les listes d'outils et d'ingrédients.
+            </summary> 
+        </member>
+        <member name="E:BibliothequeDeClasses.Dishes.PropertyChanged">
+            <summary>
+            Evenement de changement de la variable.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.addIngredients(BibliothequeDeClasses.Ingredients)">
+            <summary>
+            Méthode qui ajoute un ingrédient ingr à la liste.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.removeIngredients(BibliothequeDeClasses.Ingredients)">
+            <summary>
+            Méthode qui supprime un ingrédient ingr de la liste.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.addTools(BibliothequeDeClasses.Tools)">
+            <summary>
+            Méthode qui ajoute un outil t à la liste.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.removeTools(BibliothequeDeClasses.Tools)">
+            <summary>
+            Méthode qui supprime un outil t de la liste.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.ToString">
+            <summary>
+            Retourne la chaîne de caractère de l'objet comme souhaité.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.Equals(System.Object)">
+            <summary>
+            Redéfinition de la méthode Equals dans le cadre des plats avec un objet o en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.Equals(BibliothequeDeClasses.Dishes)">
+            <summary>
+            Redéfinition de la méthode Equals dans le cadre des plats avec un Dishes other en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.GetHashCode">
+            <summary>
+            Redéfinition de la méthode GetHashCode() dans le cadre des observable collection.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Dishes.CompareTo(BibliothequeDeClasses.IDishes)">
+            <summary>
+            Définition de la méthode CompareTo car implémenté dans l'interface IDishes.
+            </summary> 
+        </member>
+        <member name="T:BibliothequeDeClasses.DishesGlob">
+            <summary>
+            Cette classe contient une collection de tous les Dishes.
+            </summary>    
+        </member>
+        <member name="P:BibliothequeDeClasses.DishesGlob.mDishesG">
+            <summary>
+            Déclare une observable collection de plats.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.DishesGlob.#ctor(System.Collections.Generic.IEnumerable{BibliothequeDeClasses.IDishes})">
+            <summary>
+            Instancie un DishesGlob à partir d'un IEnumerable et une observable collection de plats..
+            </summary>            
+        </member>
+        <member name="M:BibliothequeDeClasses.DishesGlob.#ctor(System.Collections.ObjectModel.ObservableCollection{BibliothequeDeClasses.IDishes})">
+            <summary>
+            Instancie un DishesGlob prenant en paramètre une observable collection de plats.
+            </summary>  
+        </member>
+        <member name="M:BibliothequeDeClasses.DishesGlob.Filter(System.String,System.String)">
+            <summary>
+            requêtes Linq permettant de rechercher dans la liste de plats de différentes façons.
+            </summary>  
+        </member>
+        <member name="M:BibliothequeDeClasses.DishesGlob.SortD">
+            <summary>
+            Instancie un DishesGlob à partir d'un IEnumerable et une observable collection de plats..
+            </summary>  
+        </member>
+        <member name="T:BibliothequeDeClasses.IDishes">
+            <summary>
+            Interface implémentée par Dishes pour empêcher l'instanciation en dehors du modèle et qui implémente elle même IComparable.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.IDishes.Name">
+            <summary>
+            Déclare une propriété correspondant au nom du plat.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.IDishes.Categ">
+            <summary>
+            Déclare une propriété correspondant à la catégorie du plat.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.IDishes.Recipe">
+            <summary>
+            Déclare une propriété correspondant à la recette du plat.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.IDishes.Pathimg">
+            <summary>
+            Déclare une propriété correspondant au chemin de l'image du plat.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.IDishes.Ing">
+            <summary>
+            Déclare une propriété correspondant à la liste d'ingrédient du plat.
+            </summary> 
+        </member>
+        <member name="P:BibliothequeDeClasses.IDishes.Outils">
+            <summary>
+            Déclare une propriété correspondant à la liste d'outil du plat.
+            </summary> 
+        </member>
+        <member name="T:BibliothequeDeClasses.Ingredients">
+            <summary>
+            Classe Ingrédients, qui hérite de Composant.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Ingredients.#ctor(System.String,System.Int32)">
+             <summary>
+            On spécifie bien que le constructeur a pour base celui de la classe abstraite.
+             </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Ingredients.add(BibliothequeDeClasses.Dishes)">
+             <summary>
+            Ajoute un ingrédient au plat d.
+             </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Ingredients.delete(BibliothequeDeClasses.Dishes)">
+             <summary>
+            Supprime un ingrédient au plat d.
+             </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Ingredients.ToString">
+            <summary>
+            Retourne la chaîne de caractère de l'objet comme souhaité.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Ingredients.Equals(System.Object)">
+            <summary>
+            Redéfinition de la méthode Equals dans le cadre des ingrédients avec un objet o en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Ingredients.Equals(BibliothequeDeClasses.Ingredients)">
+            <summary>
+            Redéfinition de la méthode Equals dans le cadre des ingrédients avec un ingrédient other en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Ingredients.GetHashCode">
+            <summary>
+            Redéfinition de la méthode GetHashCode() dans le cadre des observable collection.
+            </summary> 
+        </member>
+        <member name="T:BibliothequeDeClasses.Persistance">
+             <summary>
+            On sauvegarde les données dans un fichier XML grâce aux DataContract.
+             </summary>
+        </member>
+        <member name="M:BibliothequeDeClasses.Persistance.SetCurrentDirectory">
+             <summary>
+            Permet de créer le fichier si il n'est pas déjà existant à l'endroit souhaité.
+             </summary>
+        </member>
+        <member name="M:BibliothequeDeClasses.Persistance.DeserializeDishes(System.String,System.Runtime.Serialization.DataContractSerializer)">
+            <summary>
+            Lis dans le fichier XML ou return null si il n'existe pas.
+            </summary>
+        </member>
+        <member name="M:BibliothequeDeClasses.Persistance.SerializeDishes(System.String,System.Runtime.Serialization.DataContractSerializer,BibliothequeDeClasses.DishesGlob)">
+            <summary>
+            Ecris dans le fichier XML.
+            </summary>
+        </member>
+        <member name="T:BibliothequeDeClasses.PersistDishes">
+            <summary>
+            Classe PersistDishes qui hérite de la classe abstraite Persistance.
+            </summary>
+        </member>
+        <member name="M:BibliothequeDeClasses.PersistDishes.Deserialize">
+             <summary>
+            On vérifie que le fichier existe bien sans oublier de set le bon path. Puis on le lis.
+             </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.PersistDishes.Serialize(BibliothequeDeClasses.DishesGlob)">
+             <summary>
+            On sauvegarde les données dans un fichier XML.
+             </summary> 
+        </member>
+        <member name="T:BibliothequeDeClasses.Tools">
+            <summary>
+            Classe Tools, qui hérite de Composant.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Tools.#ctor(System.String,System.Int32)">
+             <summary>
+            On spécifie bien que le constructeur a pour base celui de la classe abstraite.
+             </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Tools.add(BibliothequeDeClasses.Dishes)">
+             <summary>
+            Ajoute un outil au plat d.
+             </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Tools.delete(BibliothequeDeClasses.Dishes)">
+             <summary>
+            Supprime un outil au plat d.
+             </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Tools.ToString">
+            <summary>
+            Retourne la chaîne de caractère de l'objet comme souhaité.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Tools.Equals(System.Object)">
+            <summary>
+            Redéfinition de la méthode Equals dans le cadre des outils avec un objet o en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Tools.Equals(BibliothequeDeClasses.Tools)">
+            <summary>
+            Redéfinition de la méthode Equals dans le cadre des outils avec un outil other en paramètre.
+            </summary> 
+        </member>
+        <member name="M:BibliothequeDeClasses.Tools.GetHashCode">
+            <summary>
+            Redéfinition de la méthode GetHashCode() dans le cadre des observable collection.
+            </summary> 
+        </member>
+    </members>
+</doc>

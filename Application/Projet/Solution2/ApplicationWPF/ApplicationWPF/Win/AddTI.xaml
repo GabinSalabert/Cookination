@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApplication1.AddTI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        ShowInTaskbar="False"
+        Icon="../Pictures/logo.ico"
+        Title="AddTI" Height="300" Width="300" Background="#151515">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Width="250" Grid.ColumnSpan="2" Margin="40,0,10,0">
+                <Label x:Name="lab" Foreground="White" VerticalAlignment="Top" Grid.Column="1" FontFamily="Trebuchet MS" Margin="30" FontSize="16"/>
+            </StackPanel>
+            <Label x:Name="label" Foreground="White" FontWeight="Bold" Height="25" FontFamily="Trebuchet MS"/>
+            <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Veuillez saisir le nom de votre ingrédient ou outil" x:Name="textbox" Grid.Column="1" TextWrapping="Wrap" Height="25" PreviewTextInput="textbox_PreviewTextInput"/>
+            <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Veuillez saisir le nombre d'exemplaires." x:Name="num" Grid.Column="2" TextWrapping="Wrap" Height="25" PreviewTextInput="num_PreviewTextInput"/>
+            <Label x:Name="Er" Visibility="Hidden" Foreground="Red" Grid.Column="1" Margin="50"/>
+            <Button VerticalAlignment="Bottom" Grid.Column="0" Grid.ColumnSpan="3" Width="100" Margin="30" HorizontalAlignment="Center" Content="Add" Foreground="Black" Background="SlateGray" FontFamily="Trebuchet MS" Click="Button_Click"/>
+        </Grid>
+    </Grid>
+</Window>

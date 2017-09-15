@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Facade</name>
+    </assembly>
+    <members>
+        <member name="T:Facade.DishesGlobFacade">
+             <summary>
+            Permet à la vue de ne pas gérer des instances du modèle.
+             </summary>
+        </member>
+        <member name="P:Facade.DishesGlobFacade.AllDishes">
+            <summary>
+            Propriété static d'une observable collection de plats.
+            </summary>
+        </member>
+        <member name="M:Facade.DishesGlobFacade.LoadD">
+            <summary>
+            Chargement des données dans l'OC.
+            </summary>
+        </member>
+    </members>
+</doc>

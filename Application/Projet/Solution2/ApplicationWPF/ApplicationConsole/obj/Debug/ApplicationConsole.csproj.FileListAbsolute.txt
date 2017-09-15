@@ -1,0 +1,16 @@
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\ApplicationConsole.exe.config
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\ApplicationConsole.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\ApplicationConsole.exe
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\ApplicationConsole.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\BibliothequeDeClasses.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\Facade.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\Stub.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\BibliothequeDeClasses.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\BibliothequeDeClasses.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\Facade.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\Facade.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\Stub.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\bin\Debug\Stub.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\obj\Debug\ApplicationConsole.csprojResolveAssemblyReference.cache
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\obj\Debug\ApplicationConsole.exe
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\ApplicationConsole\obj\Debug\ApplicationConsole.pdb

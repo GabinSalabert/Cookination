@@ -1,0 +1,12 @@
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\Facade.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\Facade.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\Facade.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\BibliothequeDeClasses.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\Stub.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\BibliothequeDeClasses.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\BibliothequeDeClasses.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\Stub.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\bin\Debug\Stub.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\obj\Debug\Facade.csprojResolveAssemblyReference.cache
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\obj\Debug\Facade.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\Facade\obj\Debug\Facade.pdb

@@ -1,0 +1,6 @@
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\BibliothequeDeClasses\bin\Debug\BibliothequeDeClasses.xml
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\BibliothequeDeClasses\bin\Debug\BibliothequeDeClasses.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\BibliothequeDeClasses\bin\Debug\BibliothequeDeClasses.pdb
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\BibliothequeDeClasses\obj\Debug\BibliothequeDeClasses.csprojResolveAssemblyReference.cache
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\BibliothequeDeClasses\obj\Debug\BibliothequeDeClasses.dll
+C:\Users\Gabin Salabert\Desktop\Cookination\Projet\Projet\Solution2\ApplicationWPF\BibliothequeDeClasses\obj\Debug\BibliothequeDeClasses.pdb

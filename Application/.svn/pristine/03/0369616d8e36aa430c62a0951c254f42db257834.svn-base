@@ -1,0 +1,130 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Name="Root"
+        Icon="../Pictures/logo.ico"
+        Closed="Window_Closed"
+        Background="#151515"
+        BorderBrush="Orange"
+        BorderThickness="0.7"
+        Title="Cookination" Height="600" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" BorderBrush="Orange" BorderThickness="1">
+            <Image Source="../Pictures/Ban.jpg"/>
+        </Border>
+
+        <DockPanel>
+
+            <DockPanel Width="180">
+
+                <Label x:Name="Dishes" DockPanel.Dock="Top" Background="LightGray" BorderBrush="Orange" Foreground="Black" BorderThickness="1" HorizontalAlignment="Center" Height="29" Margin="10 20 10 10" VerticalAlignment="Top" Width="96" IsEnabled="False" Content="Dishes" HorizontalContentAlignment="Center" FontWeight="Bold" FontFamily="Trebuchet MS"/>
+
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Supprimer un plat" Margin="1" BorderBrush="Orange" Content="⚊" Click="buttonSupprPlat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="30"/>
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Ajouter un plat" Margin="1" BorderBrush="Orange" Content="✚" Click="click_btnAjoutPlat" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="30"/>
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Modifier un plat" Margin="1" BorderBrush="Orange" Content="✎" Click="buttonModifPlat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="30"/>
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Trier les plats" Margin="1" BorderBrush="Orange" Content="⌨" Click="buttonSearch_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="30"/>
+                </StackPanel>
+
+                <ListView x:Name="listBox" Width="150" Margin="15 5 15 15" Foreground="White" DockPanel.Dock="Left" ItemsSource="{Binding mDishesG}" Background="Black" BorderBrush="Orange" FontFamily="Trebuchet MS" FontWeight="Bold" SelectionChanged="listBox_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </DockPanel>
+
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="2" HorizontalAlignment="Center">
+                <CheckBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Chercher par nom" x:Name="Check1" Margin="2" Checked="Check1_Checked" Content="Search with name" Foreground="White" HorizontalAlignment="Left" ClickMode="Press" FontFamily="Trebuchet MS"/>
+                <CheckBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Chercher par catégorie" x:Name="Check2" Margin="2 2 12 2" Checked="Check2_Checked" Content="Search with categ ↬" Foreground="White" HorizontalAlignment="Right" FontFamily="Trebuchet MS"/>
+                <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Barre de recherche" x:Name="Search2" Margin="2" TextChanged="SearchChange" HorizontalAlignment="Right" Width="250"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Right">
+                <Label x:Name="c" Foreground="White" Content="Categories ↬" DockPanel.Dock="Top" Margin="4" HorizontalAlignment="Left" FontFamily="Trebuchet MS"/>
+                <ComboBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Liste déroulante de catégorie" Foreground="Black" x:Name="comboBox" DockPanel.Dock="Top" Margin="4" SelectionChanged="comboBox_SelectionChanged" HorizontalAlignment="Right" MaxDropDownHeight="100" Width="250" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <ComboBoxItem IsSelected="True" Content=""/>
+                    <ComboBoxItem Content="Régime"/>
+                    <ComboBoxItem Content="Bio"/>
+                    <ComboBoxItem Content="Grand-mère"/>
+                    <ComboBoxItem Content="Rapides"/>
+                    <ComboBoxItem Content="Léger"/>
+                    <ComboBoxItem Content="Prise de masse"/>
+                    <ComboBoxItem Content="Sucré-Salé"/>
+                    <ComboBoxItem Content="Légumes"/>
+                    <ComboBoxItem Content="Nutritionnel"/>
+                    <ComboBoxItem Content="Plaisir"/>
+                    <ComboBoxItem Content="Etranger"/>
+                </ComboBox>
+            </StackPanel>
+
+            <DockPanel>
+
+                <Grid DockPanel.Dock="Bottom" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Changer de thème de background" x:Name="button3" Grid.Column="2" HorizontalAlignment="Right" Content="☀" Click="click_btnBg" Height="20" Width="20"/>
+                    <Label x:Name="Slogan" FontFamily="Trebuchet MS" Foreground="White" VerticalAlignment="Bottom" Content="When imagination becomes reality... ℗" FontSize="15" Grid.ColumnSpan="3" Margin="165,0,183,0" />
+                </Grid>
+
+                <TabControl x:Name="tabControl" BorderBrush="Orange" Margin="15" Background="Black">
+
+                    <TabItem AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Onglet Welcome" x:Name="Welcome" Margin="0,10,-8,0" Header="Welcome" FontFamily="Trebuchet MS">
+                        <TextBlock x:Name="InnerText" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center" Text="Bienvenue sur Cookination,&#xA;Voici une application permettant de créer son propre plat et de le partager avec&#xA;d'autres utilisateurs. &#xA;Des idées de régime ? De prise de masse? &#xA;N'hésitez plus, voilà le logiciel qu'il vous faut.  &#xA;N'attendez plus, faites déborder votre imagination!" FontWeight="Bold" TextWrapping="Wrap" FontSize="14" FontFamily="Trebuchet MS" TextAlignment="Center" FontStyle="Italic"/>
+                    </TabItem>
+
+                    <TabItem AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Onglet General" x:Name="General" Header="General&#xD;&#xA;" Margin="5,10,-9,0" FontFamily="Trebuchet MS">
+                        <local:Usrctrl x:Name="Us" MyListBox="{Binding ElementName=listBox}"  DataContext="{Binding ElementName=listBox, Path=SelectedItem}" Width="{Binding ElementName=tabControl, Path=ActualWidth}"/>
+                    </TabItem>
+
+                    <TabItem AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Onglet Gallerie" x:Name="Gallery" Header="Gallery&#xD;&#xA;" Margin="5,10,-9,0" DataContext="{Binding ElementName=listBox, Path=SelectedItem}" FontFamily="Trebuchet MS">
+                        <Image x:Name="Image" Grid.Row="0" Source="{Binding Pathimg}" Stretch="Fill" Margin="30 30 30 30"/>
+                    </TabItem>
+
+                    <TabItem AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Onglet Statistiques" x:Name="Stats" Header="Statistics&#xD;&#xA;" Margin="5,10,-9,0" FontFamily="Trebuchet MS">
+                        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <StackPanel>
+                                <StackPanel x:Name="pt" Orientation="Horizontal" HorizontalAlignment="Center" Background="Black">
+                                    <StackPanel Margin="15" HorizontalAlignment="Left">
+                                        <Label x:Name="p" Content="Votre poids ↬" Foreground="White" FontWeight="Bold" FontFamily="Trebuchet MS" FontSize="14"/>
+                                        <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir poids" PreviewTextInput="poids_PreviewTextInput" BorderBrush="Orange" x:Name="poids" Width="150"/>
+                                        <Label x:Name="t" Content="Votre taille ↬" Foreground="White" FontWeight="Bold" FontFamily="Trebuchet MS" FontSize="14"/>
+                                        <TextBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Saisir taille" PreviewTextInput="taille_PreviewTextInput"  BorderBrush="Orange" x:Name="taille"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <CheckBox AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Checker si vous êtes un grand sportif" VerticalAlignment="Center"  x:Name="checkBox" Foreground="White" Margin="5" Content="Grand sportif" FontSize="14" FontWeight="Bold" FontFamily="Trebuchet MS" Width="127"/>
+                                        <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Cliquez pour calculer votre IMC" BorderBrush="Orange" Margin="10" x:Name="calcul" Content="Calculer IMC" Foreground="Black" Click="calcul_Click" FontWeight="Bold" FontFamily="Trebuchet MS" Height="48" />
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+                                    <StackPanel Orientation="Vertical">
+                                        <Label AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Votre IMC est juste en dessous" x:Name="Imcc" Content="Votre IMC ↬" Foreground="White" FontWeight="Bold" FontFamily="Trebuchet MS" FontSize="14"/>
+                                        <TextBlock TextDecorations="underline" TextAlignment="Center" x:Name="Res" Foreground="White" TextWrapping="Wrap" FontSize="12"/>
+                                    </StackPanel>
+                                    <Label x:Name="Imc" FontSize="14"/>
+                                    <Label AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Catégories recommandées en dessous" x:Name="Rec" Foreground="White" Content="Categories recommended ↬" FontWeight="Bold" FontFamily="Trebuchet MS" FontSize="14"/>
+                                    <TextBlock x:Name="Proposition" TextDecorations="underline" Foreground="White" Margin="10"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </TabItem>
+                    <TabItem AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Onglet Recette" x:Name="Recipe" Header="Recipe&#xD;&#xA;" Margin="5,10,-9,0" DataContext="{Binding ElementName=listBox, Path=SelectedItem}" FontFamily="Trebuchet MS">
+                        <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <TextBlock TextWrapping="Wrap" x:Name="Reci" Text="{Binding Recipe}" Foreground="White" FontWeight="Bold"/>
+                        </ScrollViewer>
+                    </TabItem>
+                </TabControl>
+            </DockPanel>
+
+        </DockPanel>
+    </DockPanel>
+</Window>

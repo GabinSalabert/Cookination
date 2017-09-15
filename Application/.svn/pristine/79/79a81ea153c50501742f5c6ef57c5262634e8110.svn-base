@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Stub</name>
+    </assembly>
+    <members>
+        <member name="T:Stub.Stubb">
+            <summary>
+            Mon stub.
+            </summary>
+        </member>
+        <member name="M:Stub.Stubb.LoadDishes">
+            <summary>
+            Méthode qui charge les données dans une OC.
+            </summary>
+        </member>
+    </members>
+</doc>

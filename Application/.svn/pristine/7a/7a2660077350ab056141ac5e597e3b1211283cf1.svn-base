@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApplication1.WindowDelete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        ShowInTaskbar="False"
+        Icon="../Pictures/logo.ico"
+        Closing="Window_Closing"
+        Title="Fenêtre suppression" Top="350" Left="150" Height="300" Width="300" Background="#151515" BorderBrush="Orange" BorderThickness="1">
+    <DockPanel>
+        <StackPanel VerticalAlignment="Center">
+            <Label AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Voulez vous vraiment supprimer ce plat?" HorizontalAlignment="Center" Content="Do you really want to delete this dish ?" Foreground="White" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Trebuchet MS" Margin="10"/>
+            <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Non je ne veux pas supprimer ce plat" Content="No" BorderBrush="Orange" Click="click_btnNon" Margin="10" FontFamily="Trebuchet MS"/>
+            <Button AutomationProperties.Name="{Binding ToolTip, RelativeSource={RelativeSource Self}}" ToolTip="Oui je veux supprimer ce plat" Content="Yes" BorderBrush="Orange" Click="click_btnOui" Margin="10" FontFamily="Trebuchet MS"/>
+        </StackPanel>
+    </DockPanel>
+</Window>
